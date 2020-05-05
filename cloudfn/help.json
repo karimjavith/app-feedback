@@ -1,0 +1,3 @@
+{
+  "deploy": "gcloud beta functions deploy feedback --trigger-http"
+}
