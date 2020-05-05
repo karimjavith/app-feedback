@@ -1,0 +1,59 @@
+.fb-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: 0.1s ease;
+}
+.primary {
+  background-color: #f8d57e;
+  &:hover {
+    background-color: #ffc533;
+  }
+}
+.background {
+  background-color: #efeeec;
+}
+.action-button {
+  @extend .primary;
+  min-width: 170px;
+}
+.emotions {
+  display: inline-flex;
+  > span {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .icon {
+    width: 24px;
+    height: 24px;
+    &.happy {
+      &:hover {
+        color: gray;
+      }
+      &.active {
+        color: #ffc533;
+      }
+    }
+    &.nothappy {
+      &:hover {
+        color: gray;
+      }
+      &.active {
+        color: #c53030;
+      }
+    }
+    &.acceptable {
+      &:hover {
+        color: gray;
+      }
+      &.active {
+        color: #2b6cb0;
+      }
+    }
+  }
+}
+textarea {
+  resize: none;
+}
