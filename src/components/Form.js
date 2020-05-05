@@ -69,7 +69,7 @@ function Form() {
                 className="block tracking-wide text-gray-700 text-xs font-bold mb-2"
                 htmlFor="grid-emotions"
               >
-                Overall emotion
+                Overall emotion (please select the emoticons)
               </label>
               <div id="grid-emotions" className={cn(styles.emotions)}>
                 <span
@@ -80,6 +80,7 @@ function Form() {
                   onKeyUp={handleOnChange}
                 >
                   <i
+                    title="happy"
                     className={cn('material-icons', styles.icon, styles.happy, {
                       [styles.active]: state.feedback.happy,
                     })}
@@ -95,6 +96,7 @@ function Form() {
                   onKeyUp={handleOnChange}
                 >
                   <i
+                    title="Not happy"
                     className={cn('material-icons', styles.icon, styles.nothappy, {
                       [styles.active]: state.feedback['not-happy'],
                     })}
@@ -110,6 +112,7 @@ function Form() {
                   onKeyUp={handleOnChange}
                 >
                   <i
+                    title="acceptable"
                     className={cn('material-icons', styles.icon, styles.acceptable, {
                       [styles.active]: state.feedback.acceptable,
                     })}
@@ -122,19 +125,13 @@ function Form() {
           </div>
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full px-3">
-              <label
-                className="block tracking-wide text-gray-700 text-xs font-bold mb-2"
-                htmlFor="grid-password"
-              >
-                Description
-              </label>
               <textarea
-                className="appearance-none block w-full bg-white text-gray-700 border border-gray-100 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="appearance-none block w-full bg-white text-gray-700 border border-gray-400 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-password"
                 type="text"
                 rows="5"
                 name="description"
-                placeholder="Tell me more if you fancy, please"
+                placeholder="Tell me more.."
                 onChange={handleOnChange}
               />
             </div>
@@ -148,12 +145,12 @@ function Form() {
                 Invite code
               </label>
               <input
-                className="appearance-none block w-auto bg-white text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="appearance-none block w-auto bg-white text-gray-700 border border-gray-400  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-invite-code"
                 type="text"
                 name="code"
                 required
-                placeholder=""
+                placeholder="xxxxxxxx"
                 onChange={handleOnChange}
               />
             </div>
